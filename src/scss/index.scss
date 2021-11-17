@@ -1,0 +1,10 @@
+// @import "~antd/dist/antd.css";
+@import "./-variables.scss";
+@import "./mixins.scss";
+@import "./base";
+
+@import "./components/login";
+@import "./components/select-login";
+@import "./components/chatroom";
+@import "./components/list";
+@import "./components/addboard";

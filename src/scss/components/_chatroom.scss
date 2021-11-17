@@ -1,0 +1,269 @@
+.chatroom {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  @include flex(flex-start, space-between);
+
+  flex-direction: row;
+
+  .toolbar {
+    @include flex(center, space-between);
+
+    flex-direction: column;
+    height: 100vh;
+    width: 5%;
+    box-shadow: $box-shadow;
+
+    &__logo {
+      height: 7rem;
+      width: 7rem;
+      padding-left: 0.5rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__item {
+      margin-top: -7rem;
+
+      i {
+        @include flex(center, center);
+
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        height: 5rem;
+        padding: 0 1.5rem;
+        color: #5a5a5a;
+        border-radius: 15px;
+
+        &:hover {
+          background-color: rgba(204, 204, 238, 0.3);
+          color: #7c74f1;
+          cursor: pointer;
+        }
+      }
+
+      .onClick {
+        background-color: rgba(204, 204, 238, 0.3);
+        color: #7c74f1;
+        border-radius: 15px;
+      }
+    }
+
+    &__avatar {
+      margin-bottom: 2rem;
+      position: relative;
+
+      img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .subnav {
+    position: absolute;
+    bottom: 6.5rem;
+    width: 12rem;
+    height: 10.5rem;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 0 0.2rem;
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    z-index: 1;
+
+    @include flex(center, center);
+
+    flex-direction: column;
+      color: #495057;
+
+    &__tag {
+      @include flex(center, space-between);
+
+      flex-direction: row;
+      margin: 0.2rem 0;
+      width: 100%;
+      height: 3rem;
+      padding: 0 1.2rem;
+      border-radius: 8px;
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: #e6e9ff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .list {
+    height: 100vh;
+    width: 28%;
+    position: relative;
+  }
+
+  .window {
+    height: 100vh;
+    width: 67%;
+    color: #495057;
+
+    @include flex(center, space-between);
+
+    flex-direction: column;
+
+    &__top {
+      @include flex(center, space-between);
+
+      flex-direction: row;
+      height: 7rem;
+      width: 100%;
+      padding: 0 2rem;
+      border-bottom: 1px solid rgba(168, 172, 192, 0.4);
+
+      &__info {
+        @include flex(center, center);
+
+        flex-direction: row;
+
+        .image {
+          position: relative;
+          margin-right: 1rem;
+
+          img {
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 50%;
+          }
+        }
+
+        .name {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+
+      &__icon {
+        i {
+          font-size: 1.8rem;
+          padding: 0 1rem;
+
+          &:hover {
+            color: #7c74f1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &__main {
+      height: 70%;
+      width: 100%;
+      font-size: 1.2rem;
+      color: #495057;
+      padding: 0 2rem;
+      overflow-y: auto;
+
+      .me {
+        @include flex(flex-end, flex-start);
+
+        flex-direction: column;
+      }
+
+      .you {
+        @include flex(flex-start, flex-start);
+
+        flex-direction: column;
+      }
+
+      .me,
+      .you {
+        width: 100%;
+        height: auto;
+
+        p {
+          width: auto;
+          height: auto;
+          padding: 1rem;
+          border-radius: 10px;
+          margin-bottom: 0.5rem;
+          background-color: #7c74f1;
+          color: #fff;
+        }
+
+        img {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__footer {
+      @include flex(center, flex-start);
+
+      flex-direction: row;
+      width: 100%;
+      padding: 0 2rem;
+      height: 7rem;
+      border-top: 1px solid rgba(168, 172, 192, 0.4);
+
+      input {
+        height: 3rem;
+        width: 90%;
+        background-color: #e6e9ff;
+        color: #495057;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 0 1.5rem;
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+
+      &__icon {
+        @include flex(center, center);
+
+        flex-direction: row;
+
+        i {
+          @include flex(center, center);
+
+          height: 4rem;
+          width: 4rem;
+          font-size: 1.5rem;
+          color: #7c74f1;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .send {
+          background-color: #7c74f1;
+          color: #fff;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: #665def;
+          }
+        }
+      }
+    }
+  }
+}

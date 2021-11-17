@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import "./assets/boxicons-2.0.9/css/boxicons.min.css";
+import "./scss/index.scss";
+
+import Layout from './components/Layout';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Layout />
   </React.StrictMode>,
   document.getElementById('root')
 );
